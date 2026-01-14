@@ -1,0 +1,53 @@
+.timer-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timer-display-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted-foreground);
+}
+
+.timer-display-inline svg {
+  flex-shrink: 0;
+}
+
+.timer-time {
+  font-size: 14px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  color: var(--muted-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.timer-toggle-btn:hover {
+  color: var(--primary);
+}
+
+.timer-toggle-btn svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .timer-time {
+    font-size: 13px;
+  }
+
+  .timer-display-inline svg,
+  .timer-toggle-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}

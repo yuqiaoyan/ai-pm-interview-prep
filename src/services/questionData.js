@@ -68,14 +68,9 @@ export async function fetchQuestions() {
             console.warn('CSV parsing warnings:', results.errors);
           }
 
-          console.log('Raw CSV data sample:', results.data.slice(0, 3));
-          console.log('CSV meta:', results.meta);
-
           const transformedQuestions = results.data
             .map((row, index) => transformQuestion(row, index))
             .filter(validateQuestion);
-
-          console.log('Transformed questions sample:', transformedQuestions.slice(0, 3));
 
           const categories = extractCategories(transformedQuestions);
 

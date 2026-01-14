@@ -1,8 +1,8 @@
-import TestCSV from './test-csv'
+import InterviewPractice from './components/InterviewPractice'
 import './App.css'
 
 function App() {
-  return <TestCSV />
+  return <InterviewPractice />
 }
 
 export default App
