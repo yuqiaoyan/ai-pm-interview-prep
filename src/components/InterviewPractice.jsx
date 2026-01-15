@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useQuestions } from '../hooks/useQuestions';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+import { STORAGE_KEYS, getPracticedQuestions, addPracticedQuestion, addQuestionToHistory } from '../services/storage';
 import Header from './Header';
 import CategoryFilter from './CategoryFilter';
 import QuestionCard from './QuestionCard';
@@ -11,9 +13,21 @@ function InterviewPractice() {
   const { questions, categories, loading, error } = useQuestions();
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [recentQuestions, setRecentQuestions] = useState([]);
-  const [timerVisible, setTimerVisible] = useState(true);
-  const [questionCount, setQuestionCount] = useState(0);
-  const [selectedCategories, setSelectedCategories] = useState(['All']);
+  const [timerSeconds, setTimerSeconds] = useState(0);
+
+  // localStorage-backed state
+  const [preferences, setPreferences] = useLocalStorage(STORAGE_KEYS.PREFERENCES, {
+    timerVisible: true,
+    selectedCategories: ['All'],
+  });
+
+  const [questionCount, setQuestionCount] = useState(() => {
+    return getPracticedQuestions().length;
+  });
+
+  // Extract preferences into local variables for easier use
+  const timerVisible = preferences.timerVisible;
+  const selectedCategories = preferences.selectedCategories;
 
   const getFilteredQuestions = () => {
     if (selectedCategories.includes('All')) {
@@ -41,18 +55,43 @@ function InterviewPractice() {
   };
 
   const handleNextQuestion = () => {
+    // Save history for current question before moving to next
+    if (currentQuestion) {
+      addPracticedQuestion(currentQuestion.id);
+      addQuestionToHistory(currentQuestion.id, timerSeconds);
+    }
+
     const nextQuestion = getRandomQuestion();
 
     if (nextQuestion) {
       setCurrentQuestion(nextQuestion);
+      setTimerSeconds(0); // Reset timer for new question
 
       setRecentQuestions(prev => {
         const updated = [...prev, nextQuestion.id];
         return updated.slice(-5);
       });
 
-      setQuestionCount(prev => prev + 1);
+      setQuestionCount(getPracticedQuestions().length);
     }
+  };
+
+  const handleTimerTick = (seconds) => {
+    setTimerSeconds(seconds);
+  };
+
+  const handleToggleTimer = () => {
+    setPreferences(prev => ({
+      ...prev,
+      timerVisible: !prev.timerVisible,
+    }));
+  };
+
+  const handleCategoryChange = (newCategories) => {
+    setPreferences(prev => ({
+      ...prev,
+      selectedCategories: newCategories,
+    }));
   };
 
   useEffect(() => {
@@ -87,7 +126,9 @@ function InterviewPractice() {
   const timer = (
     <Timer
       isVisible={timerVisible}
-      onToggleVisibility={() => setTimerVisible(!timerVisible)}
+      onToggleVisibility={handleToggleTimer}
+      onTick={handleTimerTick}
+      resetKey={currentQuestion?.id}
     />
   );
 
@@ -110,7 +151,7 @@ function InterviewPractice() {
         <CategoryFilter
           categories={categories}
           selectedCategories={selectedCategories}
-          onCategoryChange={setSelectedCategories}
+          onCategoryChange={handleCategoryChange}
         />
 
         <QuestionCard question={currentQuestion} timer={timer} />

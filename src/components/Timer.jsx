@@ -1,16 +1,28 @@
 import { useState, useEffect } from 'react';
 import './Timer.css';
 
-function Timer({ isVisible, onToggleVisibility }) {
+function Timer({ isVisible, onToggleVisibility, onTick, resetKey }) {
   const [seconds, setSeconds] = useState(0);
 
+  // Reset timer when resetKey changes (new question)
+  useEffect(() => {
+    setSeconds(0);
+  }, [resetKey]);
+
+  // Timer interval
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds(prevSeconds => prevSeconds + 1);
+      setSeconds(prevSeconds => {
+        const newSeconds = prevSeconds + 1;
+        if (onTick) {
+          onTick(newSeconds);
+        }
+        return newSeconds;
+      });
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [onTick]);
 
   const formatTime = (totalSeconds) => {
     const mins = Math.floor(totalSeconds / 60);

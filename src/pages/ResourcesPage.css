@@ -1,0 +1,131 @@
+.resources-container {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.resources-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.resources-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.resources-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 12px 0;
+}
+
+.resources-subtitle {
+  font-size: 18px;
+  color: var(--muted-foreground);
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.resources-section {
+  margin-bottom: 64px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 8px 0;
+}
+
+.section-description {
+  font-size: 16px;
+  color: var(--muted-foreground);
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+.category-section {
+  margin-bottom: 48px;
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.error-state {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.error-state h2 {
+  font-size: 28px;
+  color: var(--foreground);
+  margin: 0 0 12px 0;
+}
+
+.error-state p {
+  font-size: 16px;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .resources-content {
+    padding: 32px 16px 64px;
+  }
+
+  .resources-header {
+    margin-bottom: 36px;
+  }
+
+  .resources-header h1 {
+    font-size: 32px;
+  }
+
+  .resources-subtitle {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .category-title {
+    font-size: 20px;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .resources-section {
+    margin-bottom: 48px;
+  }
+
+  .category-section {
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

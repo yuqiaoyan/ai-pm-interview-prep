@@ -26,6 +26,12 @@
   align-items: center;
   gap: 8px;
   color: var(--foreground);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .logo svg {

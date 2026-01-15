@@ -1,0 +1,210 @@
+{
+  "sections": [
+    {
+      "title": "Top AI Companies Hiring",
+      "type": "companies",
+      "items": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/careers"
+        },
+        {
+          "title": "Anthropic",
+          "url": "https://anthropic.com/careers"
+        },
+        {
+          "title": "Google DeepMind",
+          "url": "https://deepmind.google/careers"
+        },
+        {
+          "title": "Microsoft AI",
+          "url": "https://careers.microsoft.com/us/en/search-results?keywords=ai"
+        },
+        {
+          "title": "Meta AI (FAIR)",
+          "url": "https://ai.meta.com/careers"
+        },
+        {
+          "title": "Amazon (Alexa & AWS AI)",
+          "url": "https://www.amazon.jobs/en/search?base_query=AI&loc_query="
+        },
+        {
+          "title": "Cohere",
+          "url": "https://cohere.com/careers"
+        },
+        {
+          "title": "Perplexity AI",
+          "url": "https://www.perplexity.ai/hub/careers"
+        },
+        {
+          "title": "Scale AI",
+          "url": "https://scale.com/careers"
+        },
+        {
+          "title": "Hugging Face",
+          "url": "https://huggingface.co/jobs"
+        }
+      ]
+    },
+    {
+      "title": "Learning Resources",
+      "type": "resources",
+      "categories": [
+        {
+          "name": "MCP (Model Context Protocol)",
+          "items": [
+            {
+              "title": "Introduction to Model Context Protocol",
+              "description": "Official introduction to MCP by Anthropic. Learn how MCP enables seamless integration between LLMs and external data sources through a standardized protocol.",
+              "url": "https://modelcontextprotocol.io/introduction",
+              "tags": ["mcp", "protocol", "integration"]
+            },
+            {
+              "title": "Building MCP Servers",
+              "description": "Comprehensive guide to building your own MCP servers. Covers architecture, implementation patterns, and best practices for connecting AI systems to data sources.",
+              "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+              "tags": ["mcp", "development", "servers"]
+            },
+            {
+              "title": "MCP Quickstart Guide",
+              "description": "Get started quickly with MCP. Step-by-step tutorial for implementing your first MCP integration with practical code examples.",
+              "url": "https://modelcontextprotocol.io/quickstart",
+              "tags": ["mcp", "tutorial", "quickstart"]
+            }
+          ]
+        },
+        {
+          "name": "RAG (Retrieval-Augmented Generation)",
+          "items": [
+            {
+              "title": "What is RAG? - AWS Guide",
+              "description": "Comprehensive overview of Retrieval-Augmented Generation. Explains how RAG enhances LLMs by combining retrieval systems with generative models for more accurate, contextual responses.",
+              "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/",
+              "tags": ["rag", "retrieval", "llm"]
+            },
+            {
+              "title": "Building Production RAG Systems",
+              "description": "Deep dive into production RAG architectures. Covers vector databases, embedding strategies, chunking techniques, and evaluation frameworks for real-world applications.",
+              "url": "https://www.pinecone.io/learn/retrieval-augmented-generation/",
+              "tags": ["rag", "production", "architecture"]
+            }
+          ]
+        },
+        {
+          "name": "Fine-tuning",
+          "items": [
+            {
+              "title": "OpenAI Fine-tuning Guide",
+              "description": "Official guide to fine-tuning OpenAI models. Learn when to fine-tune vs prompt engineering, data preparation, training best practices, and evaluation techniques.",
+              "url": "https://platform.openai.com/docs/guides/fine-tuning",
+              "tags": ["fine-tuning", "training", "openai"]
+            },
+            {
+              "title": "Understanding LoRA and QLoRA",
+              "description": "Introduction to efficient fine-tuning methods. Explains Low-Rank Adaptation (LoRA) and Quantized LoRA for training large models with limited resources.",
+              "url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+              "tags": ["lora", "fine-tuning", "efficiency"]
+            }
+          ]
+        },
+        {
+          "name": "AI Ethics & Safety",
+          "items": [
+            {
+              "title": "Anthropic's Responsible Scaling Policy",
+              "description": "Anthropic's framework for managing risks of increasingly capable AI systems. Covers AI Safety Levels (ASL), security standards, and deployment measures.",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "tags": ["safety", "ethics", "alignment"]
+            },
+            {
+              "title": "Google's AI Principles",
+              "description": "Google's framework for responsible AI development. Addresses fairness, accountability, privacy, and societal impact considerations in AI product development.",
+              "url": "https://ai.google/responsibility/principles/",
+              "tags": ["ethics", "principles", "responsibility"]
+            },
+            {
+              "title": "AI Safety Resources - Partnership on AI",
+              "description": "Curated collection of AI safety and ethics resources. Includes case studies, frameworks, and guidelines for building trustworthy AI systems.",
+              "url": "https://partnershiponai.org/",
+              "tags": ["safety", "ethics", "community"]
+            }
+          ]
+        },
+        {
+          "name": "Prompt Engineering",
+          "items": [
+            {
+              "title": "Anthropic Prompt Engineering Guide",
+              "description": "Comprehensive guide to prompt engineering for Claude. Covers techniques like chain-of-thought, few-shot learning, and system prompts with practical examples.",
+              "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview",
+              "tags": ["prompting", "claude", "techniques"]
+            },
+            {
+              "title": "OpenAI Prompt Engineering Guide",
+              "description": "Best practices for crafting effective prompts for GPT models. Includes strategies for clarity, context provision, and output formatting.",
+              "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+              "tags": ["prompting", "gpt", "best-practices"]
+            },
+            {
+              "title": "DeepLearning.AI Prompt Engineering Course",
+              "description": "Free course by Andrew Ng and OpenAI on prompt engineering for developers. Covers LLM best practices, summarizing, inferring, transforming text, and building chatbots.",
+              "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/",
+              "tags": ["prompting", "course", "tutorial"]
+            }
+          ]
+        },
+        {
+          "name": "LLM Evaluation",
+          "items": [
+            {
+              "title": "Evaluating LLMs - DeepLearning.AI",
+              "description": "Framework for evaluating large language models. Covers accuracy metrics, safety evaluations, bias detection, and human evaluation best practices.",
+              "url": "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/",
+              "tags": ["evaluation", "metrics", "testing"]
+            },
+            {
+              "title": "OpenAI Evals Framework",
+              "description": "Open-source framework for evaluating LLMs. Provides tools and methodologies for systematic model performance assessment across diverse tasks.",
+              "url": "https://github.com/openai/evals",
+              "tags": ["evaluation", "framework", "open-source"]
+            }
+          ]
+        },
+        {
+          "name": "AI Product Management Fundamentals",
+          "items": [
+            {
+              "title": "Google's AI/ML Product Management Resources",
+              "description": "Collection of resources for AI product managers. Includes case studies, frameworks, and best practices from Google's product teams.",
+              "url": "https://ai.google/education/",
+              "tags": ["product-management", "google", "resources"]
+            },
+            {
+              "title": "Lenny's Newsletter - AI PM Interviews",
+              "description": "Interviews with top AI product managers from leading companies. Learn from real practitioners about building and shipping AI products.",
+              "url": "https://www.lennysnewsletter.com/",
+              "tags": ["product-management", "interviews", "newsletter"]
+            }
+          ]
+        },
+        {
+          "name": "AI Safety & Alignment",
+          "items": [
+            {
+              "title": "AI Alignment Forum",
+              "description": "Community hub for AI alignment research and discussion. Features research papers, discussions, and updates on alignment approaches from leading researchers.",
+              "url": "https://www.alignmentforum.org/",
+              "tags": ["alignment", "research", "community"]
+            },
+            {
+              "title": "Anthropic's Constitutional AI Paper",
+              "description": "Research paper introducing Constitutional AI (CAI). Describes methods for training AI systems to be helpful, harmless, and honest through principle-based approaches.",
+              "url": "https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback",
+              "tags": ["alignment", "research", "constitutional-ai"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
