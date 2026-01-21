@@ -16,6 +16,15 @@ function Footer() {
           </a>
           {' '} | {' '}
           <a
+            href="https://bonnieyu.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            Blog
+          </a>
+          {' '} | {' '}
+          <a
             href="mailto:bonnieyu.coaching@gmail.com"
             className="footer-link"
           >
