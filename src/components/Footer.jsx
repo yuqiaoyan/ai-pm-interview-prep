@@ -14,14 +14,15 @@ function Footer() {
           >
             Bonnie Yu
           </a>
-          {' '} | {' '}
+        </p>
+        <p>
           <a
             href="https://bonnieyu.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
           >
-            Blog
+            bonnieyu.substack.com
           </a>
           {' '} | {' '}
           <a
